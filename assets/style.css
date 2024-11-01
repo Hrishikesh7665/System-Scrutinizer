@@ -1,0 +1,315 @@
+/*
+CSS file for System-Scrutinizer 
+Author: Hrishikesh7665 (Hrishikesh Patra) & ninja-hattori (Shabdik Chakraborty)
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+a img,
+table {
+    border: 0;
+}
+body,
+table.ReportSection .noshed {
+    background-color: #fff;
+}
+html {
+    --heading-background-col: #1f50ff81;
+    --heading-border: 1px solid lightgray;
+}
+.watermark {
+    position: fixed;
+    opacity: 0.155;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -46%);
+    z-index: -999;
+}
+.header,
+.reportTitleDesc {
+    top: 0;
+    color: #fff;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+.header h1 {
+    font-variant-caps: small-caps;
+    color: #000;
+    font: 500 45px Verdana, sans-serif;
+}
+.header {
+    background: linear-gradient(to bottom, #b8e1fc 0, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+    height: 150px;
+    line-height: 35px;
+}
+.reportTitleDesc {
+    background-color: #dfdfdf;
+}
+.reportTitleDescP {
+    color: #000;
+    font-size: 12.95px;
+    margin: 4px;
+}
+body {
+    margin: 0 0 40px;
+    color: #000;
+    cursor: default;
+    font: 400 83.33% Roboto, Arial, Helvetica, sans-serif;
+}
+a:link,
+a:visited {
+    color: #337cbb;
+    font-weight: 700;
+    text-decoration: none;
+}
+a:active,
+a:hover {
+    color: #23547f;
+    text-decoration: underline;
+}
+div {
+    padding: 0;
+    margin: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr {
+    vertical-align: top;
+}
+td,
+th {
+    text-align: left;
+    padding: 0 0.5em;
+}
+h1.reportTitle {
+    display: block;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 150%;
+    background-color: var(--heading-background-col);
+}
+table.reportHeader {
+    margin-top: 0.25em;
+}
+table.reportHeader th {
+    text-align: right;
+    font-style: italic;
+    font-weight: 400;
+}
+table.reportHeader td {
+    text-align: left;
+    padding-left: 0;
+}
+div.reportSection {
+    float: none;
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+div.rsLeft,
+div.rsRight {
+    float: left;
+    width: 49%;
+    overflow: hidden;
+}
+div.rsLeft {
+    clear: both;
+    margin-right: 1%;
+}
+div.rsRight {
+    clear: none;
+    margin-left: 1%;
+}
+h2.reportSectionHeader {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    padding-top: 2px;
+    font-size: inherit;
+    font-weight: 700;
+    background: #ccc;
+}
+h2.rshSup {
+    line-height: 1em;
+}
+span.rshNote {
+    font-weight: 400;
+    font-size: 95%;
+}
+span.swLinkI {
+    color: #2194f1;
+    font: 700 106% Verdana, Arial, Helvetica, sans-serif;
+}
+div.reportSectionBody {
+    text-align: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+div.rsFooter {
+    float: none;
+    clear: both;
+    text-align: center;
+    margin-top: 0.5em;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+div.footnoteList {
+    display: inline-block;
+    text-align: left;
+}
+.hasInfo:hover {
+    background-color: #fff17f;
+    cursor: help;
+    z-index: 999;
+}
+table.ReportHeader {
+    width: auto;
+    float: left;
+}
+table.ReportHeader th {
+    text-align: left;
+    padding: 2px;
+    font-weight: 700;
+    font-size: 110%;
+}
+table.ReportHeader td {
+    text-align: left;
+    padding: 2px 4px;
+}
+div.ReportToggle {
+    text-align: left;
+    padding: 1em 0.5em 0.25em;
+    clear: left;
+}
+#Report .blurb {
+    clear: none;
+}
+table.ReportSection {
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+table.ReportSection > thead tr {
+    background-color: #f4f4f4;
+    vertical-align: middle;
+}
+table.ReportSection > thead th {
+    text-align: left;
+    padding: 2px;
+    font-weight: 700;
+}
+table.ReportSection > thead td {
+    text-align: right;
+    white-space: nowrap;
+}
+table.ReportSection > tbody th {
+    text-align: right;
+    padding-left: 0;
+    font-weight: 400;
+}
+table.ReportSection > tbody td {
+    text-align: left;
+}
+button.Ctl {
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+    font-size: 0;
+}
+#Scoring:target,
+div.blurb:target + div.reportSection > h2.reportSectionHeader,
+div.reportSection:target > h2.reportSectionHeader {
+    animation: 0.35s 6 blink;
+}
+@keyframes blink {
+    50% {
+        background-color: #ffcd7f;
+    }
+}
+@media print {
+    #pageBody,
+    #pageHeader {
+        position: static;
+        height: auto;
+    }
+    #Report,
+    #pageBody {
+        width: auto;
+    }
+    body {
+        margin: 0;
+        font-size: 10pt;
+    }
+    a:link,
+    a:visited {
+        color: #000;
+        text-decoration: none;
+        font-weight: 400;
+    }
+    #pageHeader {
+        background-color: inherit;
+    }
+    #pageBody {
+        margin: 0;
+        overflow: hidden;
+    }
+    #Help,
+    #leftNavBar,
+    span.rshNote {
+        display: none;
+    }
+    div.report {
+        font-family: "Bookman Old Style", Georgia, "Times New Roman", Times, serif;
+    }
+    div.reportSection {
+        line-height: 1em;
+        word-spacing: 0.1em;
+    }
+    div.reportSectionHeader,
+    h1.reportTitle {
+        border: var(--heading-border);
+    }
+}
+#pageFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    font-size: 11px;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 5px 0;
+}
+div.blurb {
+    clear: both;
+    padding-top: 2em;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 1.8px;
+    right: 20px;
+    z-index: 99;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #b0e7f9;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+#scrollToTopBtn:hover {
+    background-color: #6ba8e5;
+    transform: scale(1.1);
+}
