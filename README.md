@@ -26,13 +26,14 @@
 ## Installing From Sources
 Clone the repository to your local machine using the following command:
 ```bash
-https://github.com/Hrishikesh7665/System-Scrutinizer.git
+git clone https://github.com/Hrishikesh7665/System-Scrutinizer.git
 ```
 Alternatively, You can Download and Extract the Zip
 
 `Direct Download Zip` [Click Here](https://github.com/Hrishikesh7665/System-Scrutinizer/archive/refs/heads/main.zip)
 
 ## Usage
+Run Command Prompt as Administrator
   ```bash
   cd System-Scrutinizer
   python audit.py
