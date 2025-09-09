@@ -3,6 +3,7 @@ from math import ceil
 import subprocess
 import time
 import datetime
+import dateutil.parser
 from configuration import red, green, yellow, log_col, debug_mode
 
 def list_allStartup_Software():
@@ -166,7 +167,8 @@ def installed_Software ():
         if size[i] is not None:
             report_installed_software+="Size: "+str(size[i])+" Bytes\r"
         if install_date[i] is not None:
-            report_installed_software+="Install Date: "+ datetime.datetime.strptime((str(install_date[i])), "%Y%m%d").strftime("%d-%m-%Y") + "\r"
+            yourdate = dateutil.parser.parse(str(install_date[i]))
+            report_installed_software+="Install Date: "+ yourdate.strftime("%d-%m-%Y") + "\r"
         if runningState[i] is not None:
             report_installed_software+="State: "+str(runningState[i])+ "\r"
             if runningState[i] == "Running":
